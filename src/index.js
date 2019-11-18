@@ -64,22 +64,25 @@ class Index extends React.Component {
     changeComponent = (path)=>{console.log(path);
         let newComponent = '';
         let pageTitle = '';
+        let uri = '';
 
         switch(path){
             case '/projects':
                 newComponent = <Projects projects={this.state.portfolioData.projects} />;
                 pageTitle = 'Projects';
+                uri = path;
                 break;
 
             default:
                 newComponent = <Home data={this.state.portfolioData} />;
                 pageTitle = 'Home';
+                uri = '/home';
                 break;
         }
 
-        this.setState({activeComponent: newComponent, currentUri:path});
+        this.setState({activeComponent: newComponent, currentUri:uri});
 
-        this.changeUrl(path, pageTitle);
+        this.changeUrl(uri, pageTitle);
     }
 
 
