@@ -4,7 +4,7 @@ class Experience extends Component{
     constructor(props){
         super(props);
         this.state = {
-            assetURL: 'https://amirsanni.com/'
+            assetURL: process.env.REACT_APP_ASSET_URL
         }
     }
 
@@ -22,12 +22,12 @@ class Experience extends Component{
     }
 
 
-    setDuties = (duties)=>{
+    setDuties = (duties, posIndex)=>{
         let dutyList = '';
 
         if(duties.length){
             dutyList = duties.map((duty, index)=>{
-                return <li key={`duty_${index}`}>{duty}</li>
+                return <li key={`${posIndex}_duty_${index}`}>{duty}</li>
             });
         }
 
@@ -38,10 +38,10 @@ class Experience extends Component{
         let experiences = '';
 
         if(this.props.experiences.length){
-            experiences = this.props.experiences.map((exp, index)=>{
+            experiences = this.props.experiences.map((exp, i)=>{
                 return (
-                    <div className='row mb-4 border border-top-1 border-left-0 border-right-0 border-bottom-0'>
-                        <div className="col-sm-8 h4 mt-3" key={`experience_${index}`}>{exp.position}</div>
+                    <div key={`experience_${i}`} className='row mb-4 border border-top-1 border-left-0 border-right-0 border-bottom-0'>
+                        <div className="col-sm-8 h4 mt-3">{exp.position}</div>
                         <div className="col-sm-4 mt-3">
                             {this.setLogo(exp.logo)}
                         </div>
@@ -63,7 +63,7 @@ class Experience extends Component{
                         <div className="col-sm-12">
                             <b><u>Duties</u></b>
                             <ul>
-                                {this.setDuties(exp.duties)}
+                                {this.setDuties(exp.duties, i)}
                             </ul>
                         </div>
                     </div>
