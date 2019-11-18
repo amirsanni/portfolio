@@ -16,7 +16,7 @@ class Index extends React.Component {
             portfolioData: {},
             activeComponent: '',
             currentUri: '',
-            apiUrl: 'https://amirsanni.com/api.php',
+            apiUrl: process.env.REACT_APP_API_URL,
             appRoot: process.env.REACT_APP_APP_ROOT
         }
     }
