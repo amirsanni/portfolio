@@ -1,0 +1,23 @@
+.banner{
+  max-width: 98.7vw;
+  height: 300px;
+  background: url('https://amirsanni.com/assets/img/banner.jfif');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.card-height{
+  height: 220px;
+}
+
+.footer-height{
+  height: 60px;
+}
+
+.website-logo{
+  max-width:100px;
+  max-height:30px
+}
