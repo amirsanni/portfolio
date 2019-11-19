@@ -27,7 +27,7 @@ class Experience extends Component{
 
         if(duties.length){
             dutyList = duties.map((duty, index)=>{
-                return <li key={`${posIndex}_duty_${index}`}>{duty}</li>
+                return <li key={`${posIndex}_duty_${index}`} dangerouslySetInnerHTML={{__html:duty}}></li>
             });
         }
 
@@ -62,7 +62,9 @@ class Experience extends Component{
 
                         <div className="col-sm-12">
                             <b><u>Duties</u></b>
-                            <ul dangerouslySetInnerHTML={{__html:this.setDuties(exp.duties, i)}}></ul>
+                            <ul>
+                                {this.setDuties(exp.duties, i)}
+                            </ul>
                         </div>
                     </div>
                 );
