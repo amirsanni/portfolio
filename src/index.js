@@ -5,6 +5,8 @@ import './css/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle'
 import 'font-awesome/css/font-awesome.min.css'
+import Loading from './components/Loading';
+import Navbar from './components/Navbar';
 import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
 import * as serviceWorker from './serviceWorker';
@@ -14,13 +16,12 @@ class Index extends React.Component {
         super();
         this.state = {
             portfolioData: {},
-            activeComponent: '',
+            activeComponent: <Loading />,
             currentUri: '',
             apiUrl: process.env.REACT_APP_API_URL,
             appRoot: process.env.REACT_APP_APP_ROOT
         }
     }
-
 
     componentDidMount = ()=>{
         fetch(this.state.apiUrl+'?get=portfolio', {
@@ -48,20 +49,9 @@ class Index extends React.Component {
 
         this.changeComponent(uri);
     }
-  
-    
-    navigate = (e)=>{
-        e.preventDefault();
-
-        let pathnameArr = e.target.href.split('/');
-
-        let path = '/' + pathnameArr[pathnameArr.length - 1];
-
-        this.changeComponent(path);
-    }
 
 
-    changeComponent = (path)=>{console.log(path);
+    changeComponent = (path)=>{
         let newComponent = '';
         let pageTitle = '';
         let uri = '';
@@ -90,33 +80,11 @@ class Index extends React.Component {
         window.history.pushState({pageTitle:pageTitle}, '', this.state.appRoot+path);
     }
 
-
-    makeActive = (uri)=>{
-        return uri === this.state.currentUri ? 'active' : '';
-    }
-
   
     render(){
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href='/' onClick={this.navigate}>Welcome</a>
-                    <button className="navbar-toggler btn bg-secondary" type="button" data-toggle="collapse" data-target="#navbarMenuItems" aria-controls="navbarMenuItems" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className="fa fa-bars text-white"></i>
-                    </button>
-
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarMenuItems">
-                        <ul className="navbar-nav">
-                            <li className="nav-item custom-nav-item">
-                                <a className={`nav-link ${this.makeActive('')}`} href="/" onClick={this.navigate}>Home</a>
-                            </li>
-
-                            <li className="nav-item custom-nav-item">
-                                <a className={`nav-link ${this.makeActive('/projects')}`} href="projects" onClick={this.navigate}>Projects</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <Navbar currentUri={this.state.currentUri} changeComponent={this.changeComponent} />
 
                 <div className="container-fluid mb-3">
                     {this.state.activeComponent}
