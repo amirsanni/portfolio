@@ -6,6 +6,10 @@ import Experience from './Experience';
 import Education from './Education';
 
 class Home extends React.Component{
+    constructor(props){
+        super(props);
+    }
+
     render(){
         return (
             <div className="row mt-3">

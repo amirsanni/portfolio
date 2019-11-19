@@ -1,6 +1,10 @@
 import React from 'react';
 
 class Summary extends React.Component{
+    constructor(props){
+        super(props);
+    }
+
     render(){
         return (
             <div className="row mb-3">
