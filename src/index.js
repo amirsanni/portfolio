@@ -84,7 +84,7 @@ class Index extends React.Component {
     render(){
         return (
             <div>
-                <Navbar currentUri={this.state.currentUri} changeComponent={this.changeComponent} />
+                <Navbar appRoot={this.state.appRoot} currentUri={this.state.currentUri} changeComponent={this.changeComponent} />
 
                 <div className="container-fluid mb-3">
                     {this.state.activeComponent}
