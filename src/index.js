@@ -100,7 +100,7 @@ class Index extends React.Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href='/home' onClick={this.navigate}>Welcome</a>
+                    <a className="navbar-brand" href='/' onClick={this.navigate}>Welcome</a>
                     <button className="navbar-toggler btn bg-secondary" type="button" data-toggle="collapse" data-target="#navbarMenuItems" aria-controls="navbarMenuItems" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fa fa-bars text-white"></i>
                     </button>
@@ -108,7 +108,7 @@ class Index extends React.Component {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarMenuItems">
                         <ul className="navbar-nav">
                             <li className="nav-item custom-nav-item">
-                                <a className={`nav-link ${this.makeActive('')}`} href="/home" onClick={this.navigate}>Home</a>
+                                <a className={`nav-link ${this.makeActive('')}`} href="/" onClick={this.navigate}>Home</a>
                             </li>
 
                             <li className="nav-item custom-nav-item">
