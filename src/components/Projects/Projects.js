@@ -1,10 +1,6 @@
 import React from 'react';
 
 class Projects extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
     setGithubUrl = (githubLink)=>{
         if(githubLink){
             return (

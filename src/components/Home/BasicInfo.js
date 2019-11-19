@@ -1,10 +1,6 @@
 import React from 'react';
 
 class BasicInfo extends React.Component{
-    constructor(props){
-        super(props);
-    }
-
     getSocialLinks = ()=>{
         let socialLinks = '';
 
