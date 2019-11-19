@@ -76,7 +76,7 @@ class Index extends React.Component {
             default:
                 newComponent = <Home data={this.state.portfolioData} />;
                 pageTitle = 'Home';
-                uri = '/home';
+                uri = '';
                 break;
         }
 
@@ -108,7 +108,7 @@ class Index extends React.Component {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarMenuItems">
                         <ul className="navbar-nav">
                             <li className="nav-item custom-nav-item">
-                                <a className={`nav-link ${this.makeActive('/home')}`} href="/home" onClick={this.navigate}>Home</a>
+                                <a className={`nav-link ${this.makeActive('')}`} href="/home" onClick={this.navigate}>Home</a>
                             </li>
 
                             <li className="nav-item custom-nav-item">
