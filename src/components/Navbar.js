@@ -18,7 +18,7 @@ class Navbar extends React.Component{
     render(){
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href={`${this.props.appRoot}`} onClick={this.props.navigate}>Welcome</a>
+                <a className="navbar-brand" href={`${this.props.appRoot}`} onClick={this.navigate}>Welcome</a>
                 <button className="navbar-toggler btn bg-secondary" type="button" data-toggle="collapse" data-target="#navbarMenuItems" aria-controls="navbarMenuItems" aria-expanded="false" aria-label="Toggle navigation">
                     <i className="fa fa-bars text-white"></i>
                 </button>
