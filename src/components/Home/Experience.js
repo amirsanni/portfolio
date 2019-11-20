@@ -42,8 +42,7 @@ class Experience extends Component{
                             <span className="form-text small"><i className="fa fa-map-marker text-muted"></i> {exp.location}</span>
 
                             <span className="form-text small">
-                                <i className="fa fa-globe"></i> 
-                                <a href={exp.website} target="_blank" rel="noopener noreferrer">Website</a>
+                                <i className="fa fa-globe"></i> <a href={exp.website} target="_blank" rel="noopener noreferrer">Website</a>                                
                             </span>
                         </div>
 
