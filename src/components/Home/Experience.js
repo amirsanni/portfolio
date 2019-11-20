@@ -8,19 +8,6 @@ class Experience extends Component{
         }
     }
 
-    setLogo = (logoLink)=>{
-        return <img src={this.state.assetURL+logoLink} className="float-right website-logo" alt='' />;
-    }
-
-    setWebsiteLink = (websiteLink)=>{
-        return (
-            <span className="form-text small">
-                <i className="fa fa-globe"></i>
-                <a href={websiteLink} target="_blank" rel="noopener noreferrer"> Website</a>
-            </span>
-        );
-    }
-
 
     setDuties = (duties, posIndex)=>{
         let dutyList = '';
@@ -34,6 +21,7 @@ class Experience extends Component{
         return dutyList;
     }
 
+
     setExperiences = ()=>{
         let experiences = '';
 
@@ -43,7 +31,7 @@ class Experience extends Component{
                     <div key={`experience_${i}`} className='row mb-4 border border-top-1 border-left-0 border-right-0 border-bottom-0'>
                         <div className="col-sm-8 h4 mt-3">{exp.position}</div>
                         <div className="col-sm-4 mt-3">
-                            {this.setLogo(exp.logo)}
+                            <img src={this.state.assetURL+exp.logo} className="float-right website-logo" alt={exp.company_name} />
                         </div>
 
                         <div className="col-sm-8">
@@ -53,7 +41,10 @@ class Experience extends Component{
 
                             <span className="form-text small"><i className="fa fa-map-marker text-muted"></i> {exp.location}</span>
 
-                            {this.setWebsiteLink(exp.website)}
+                            <span className="form-text small">
+                                <i className="fa fa-globe"></i> 
+                                <a href={exp.website} target="_blank" rel="noopener noreferrer">Website</a>
+                            </span>
                         </div>
 
                         <div className="col-sm-4 text-right">
@@ -73,6 +64,7 @@ class Experience extends Component{
 
         return experiences;
     }
+    
 
     render(){
         return (
