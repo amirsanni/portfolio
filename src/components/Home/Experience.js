@@ -3,9 +3,7 @@ import React, {Component} from 'react';
 class Experience extends Component{
     constructor(props){
         super(props);
-        this.state = {
-            assetURL: process.env.REACT_APP_ASSET_URL
-        }
+        this.assetURL = process.env.REACT_APP_ASSET_URL
     }
 
 
@@ -31,7 +29,7 @@ class Experience extends Component{
                     <div key={`experience_${i}`} className='row mb-4 border border-top-1 border-left-0 border-right-0 border-bottom-0'>
                         <div className="col-sm-8 h4 mt-3">{exp.position}</div>
                         <div className="col-sm-4 mt-3">
-                            <img src={this.state.assetURL+exp.logo} className="float-right website-logo" alt={exp.company_name} />
+                            <img src={this.assetURL+exp.logo} className="float-right website-logo" alt={exp.company_name} />
                         </div>
 
                         <div className="col-sm-8">

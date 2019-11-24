@@ -17,14 +17,14 @@ class Index extends React.Component {
         this.state = {
             portfolioData: {},
             activeComponent: <Loading />,
-            currentUri: '',
-            apiUrl: process.env.REACT_APP_API_URL,
-            appRoot: process.env.REACT_APP_APP_ROOT
+            currentUri: ''
         }
+        this.apiUrl = process.env.REACT_APP_API_URL;
+        this.appRoot = process.env.REACT_APP_APP_ROOT
     }
 
     componentDidMount = ()=>{
-        fetch(this.state.apiUrl+'?get=portfolio', {
+        fetch(this.apiUrl+'?get=portfolio', {
             mode:'cors'
         }).then((res)=>{
             if(res.ok){
@@ -77,14 +77,14 @@ class Index extends React.Component {
 
 
     changeUrl = (path, pageTitle)=>{
-        window.history.pushState({pageTitle:pageTitle}, '', this.state.appRoot+path);
+        window.history.pushState({pageTitle:pageTitle}, '', this.appRoot+path);
     }
 
   
     render(){
         return (
             <div>
-                <Navbar appRoot={this.state.appRoot} currentUri={this.state.currentUri} changeComponent={this.changeComponent} />
+                <Navbar appRoot={this.appRoot} currentUri={this.state.currentUri} changeComponent={this.changeComponent} />
 
                 <div className="container-fluid mb-3">
                     {this.state.activeComponent}
