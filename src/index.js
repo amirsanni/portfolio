@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'jquery/dist/jquery';
 import './css/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle'
 import 'font-awesome/css/font-awesome.min.css'
 import Loading from './components/Loading';
 import Navbar from './components/Navbar';
