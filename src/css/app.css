@@ -175,4 +175,8 @@ body{
   .social-icon{
     font-size: 10px;
   }
+
+  .card-custom{
+    font-size: 12px;
+  }
 }
