@@ -83,13 +83,10 @@ class Index extends React.Component {
   
     render(){
         return (
-            <div>
-                <Navbar appRoot={this.appRoot} currentUri={this.state.currentUri} changeComponent={this.changeComponent} />
-
-                <div className="container-fluid mb-3">
-                    {this.state.activeComponent}
-                </div>
-            </div>
+            <React.Fragment>
+                <Navbar />
+                {this.state.activeComponent}
+            </React.Fragment>
         );
     }
 }

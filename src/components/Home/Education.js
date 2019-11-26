@@ -7,24 +7,16 @@ class Education extends React.Component{
         if(this.props.education.length){
             education = this.props.education.map((edu, index)=>{
                 return (
-                    <div className="row mb-4" key={`edu_${index}`}>
-                        <div className="col-12 h4">
-                            <i className="fa fa-graduation-cap"></i> {edu.degree}
-                        </div>
-
-                        <div className="col-sm-6 pl-4">
-                            <span className="form-text">
-                                <i className="fa fa-university"></i> {edu.school_name}
-                            </span>
-
-                            <span className="form-text small">
-                                <i className="fa fa-map-marker text-muted"></i> {edu.location}
-                            </span>
-                        </div>
-
-                        <div className="col-sm-6 text-right">
-                            <small className="form-text">{`${edu.start_date} - ${edu.end_date}`}</small>
-                        </div>
+                    <div className="col-md-4 offset-1 mb-3" key={`edu_${index}`}>
+                        <span>
+                            <img src='https://pbs.twimg.com/profile_images/1599443641/New_Picture__1__400x400.png' style={{'height':'150px'}} className='img-fluid float-left' alt={edu.school_name} />
+                        </span>
+                        
+                        <span className='pl-5 ml-5'>
+                            <div className='degree-name'>{edu.degree}</div>
+                            <div className='duration'>{edu.end_date}</div>
+                            <div className='school-name mt-4'>{edu.school_name}, {edu.location}</div>
+                        </span>
                     </div>
                 );
             })
@@ -35,10 +27,17 @@ class Education extends React.Component{
 
     render(){
         return (
-            <div className="card">
-                <h2 className="text-center mt-2 text-muted">Education</h2>
-                <div className="card-body">
-                    {this.setEducation()}
+            <div className='bg'>
+                <div className='container'>
+                    <div className='row' id='education'>
+                        <div className="col-12 section-title text-center mt-5 mb-5" style={{color: '#2ECDFF'}}>
+                            <i className='fa fa-book'></i> Education
+                        </div>
+                    </div>
+
+                    <div className='row pb-4'>
+                        {this.setEducation()}
+                    </div>
                 </div>
             </div>
         );

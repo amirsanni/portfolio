@@ -26,33 +26,39 @@ class Experience extends Component{
         if(this.props.experiences.length){
             experiences = this.props.experiences.map((exp, i)=>{
                 return (
-                    <div key={`experience_${i}`} className='row mb-4 border border-top-1 border-left-0 border-right-0 border-bottom-0'>
-                        <div className="col-sm-8 h4 mt-3">{exp.position}</div>
-                        <div className="col-sm-4 mt-3">
-                            <img src={this.assetURL+exp.logo} className="float-right website-logo" alt={exp.company_name} />
-                        </div>
+                    <div key={`experience_${i}`} className='row mb-4'>
+                        <div className='col-md-12'>
+                            <div className='card exp-card'>
+                                <div className='card-body'>
+                                    <div className='row'>
+                                        <div className='col-md-2'>
+                                            <img src={this.assetURL+exp.logo} className="company-logo" alt={exp.company_name} />
+                                        </div>
 
-                        <div className="col-sm-8">
-                            <span className="form-text">
-                                <i className="fa fa-building"></i> {exp.company_name}
-                            </span>
-
-                            <span className="form-text small"><i className="fa fa-map-marker text-muted"></i> {exp.location}</span>
-
-                            <span className="form-text small">
-                                <i className="fa fa-globe"></i> <a href={exp.website} target="_blank" rel="noopener noreferrer">Website</a>                                
-                            </span>
-                        </div>
-
-                        <div className="col-sm-4 text-right">
-                            <span className="form-text small">{`${exp.start_date} - ${exp.end_date}`}</span>
-                        </div>
-
-                        <div className="col-sm-12">
-                            <b><u>Duties</u></b>
-                            <ul>
-                                {this.setDuties(exp.duties, i)}
-                            </ul>
+                                        <div className='col-md-8'>
+                                            <div className='job-title'>{exp.position}</div>
+                                            <div>
+                                                <span>
+                                                    <a className='company-info' href={exp.website} target='_blank' rel="noopener noreferrer">
+                                                        {exp.company_name}
+                                                    </a>
+                                                </span>
+                                                <span className='company-info'>&nbsp;|&nbsp;</span>
+                                                <span className='company-info'>{exp.location}</span>
+                                            </div>
+                                            <div className='mt-2'>
+                                                <ul className='duties'>
+                                                    {this.setDuties(exp.duties, i)}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className='col-md-2 duration text-right'>
+                                            {`${exp.start_date} - ${exp.end_date}`}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 );
@@ -65,9 +71,15 @@ class Experience extends Component{
 
     render(){
         return (
-            <div className="card mb-3">
-                <h2 className="text-center mt-2 text-muted">Work Experience</h2>
-                <div className="card-body">{this.setExperiences()}</div>
+            <div className='bg-alt'>
+                <div className='container pb-3'>
+                    <div className='row' id='experience'>
+                        <div className="col-12 section-title text-center mb-2 mt-5">
+                            <i className='fa fa-briefcase'></i> Work Experience
+                        </div>
+                    </div>
+                    {this.setExperiences()}
+                </div>
             </div>
         );
     }

@@ -1,23 +1,178 @@
-.banner{
-  max-width: 98.7vw;
-  height: 300px;
-  background: url('https://amirsanni.com/assets/img/banner.jfif');
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Overpass+Mono&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
-.card-height{
-  height: 220px;
+
+.bg{
+  background: #100828;
+  color: #FFFFFF;
 }
 
-.footer-height{
-  height: 60px;
+
+.bg-alt{
+  background: #E5E5E5;
 }
 
-.website-logo{
-  max-width:100px;
-  max-height:30px
+
+.my-name{
+  height: 31px;
+  font-family: 'Overpass Mono', monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+
+.navbar-container{
+  padding-top: 10px;
+}
+
+
+.menu{
+  height: 19px;
+  text-align: right;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+.menu-item{
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+
+.summary{
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+
+.skill{
+  font-size: 14px !important;
+  color: #685F81 !important;
+  border-color: #685F81 !important;
+  margin: 5px !important;
+}
+
+
+.app-btn{
+  background-color: #FFFF00 !important;
+}
+
+
+.social-icon{
+  margin-right: 25px;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+
+.section-title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.card-custom{
+  height: 230px;
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #023734;
+}
+
+.card-custom-title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.exp-card{
+  background: #F4F1FC !important;
+}
+
+.job-title{
+  color: #100828;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.company-info{
+  color: #685F81 !important;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.duration{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #685F81 !important;
+}
+
+.company-logo{
+  width: 99.79px;
+  left: 140px;
+}
+
+
+.duties{
+  list-style-type: circle;
+  font-size: 14px;
+  padding-left: 1.2em;
+}
+
+.degree-name{
+  font-weight: 600;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.school-name{
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  color: #A098B6;
+}
+
+.footer-border{
+  border-top: solid 1px #685F81 !important;
+}
+
+.copyright{
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 20px;
+  color: #A098B6;
+}
+
+
+
+
+
+@media(max-width: 640px){
+  .my-name{
+    text-align: center;
+  }
+
+  .menu{
+    height: 19px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .social-icon{
+    font-size: 18px;
+  }
 }
