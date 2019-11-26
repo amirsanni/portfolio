@@ -56,7 +56,7 @@ class Projects extends React.Component{
                         <div className="card card-custom" style={{background:this.setBg(index)}}>
                             <div className="card-body">
                                 <div className="card-custom-title">{project.name}</div>
-                                <div className='text-white'>{project.description}</div>
+                                <div className='text-white mt-1'>{project.description}</div>
                             </div>
 
                             <div className="card-footer">
