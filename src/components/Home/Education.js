@@ -15,7 +15,7 @@ class Education extends React.Component{
                         <span className='pl-5 ml-5'>
                             <div className='degree-name'>{edu.degree}</div>
                             <div className='duration'>{edu.end_date}</div>
-                            <div className='school-name mt-4'>{edu.school_name}, {edu.location}</div>
+                            <div className='school-name mt-3'>{edu.school_name}, {edu.location}</div>
                         </span>
                     </div>
                 );
