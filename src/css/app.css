@@ -169,10 +169,10 @@ body{
   .menu{
     height: 19px;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .social-icon{
-    font-size: 12px;
+    font-size: 10px;
   }
 }
