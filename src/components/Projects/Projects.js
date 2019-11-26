@@ -89,22 +89,24 @@ class Projects extends React.Component{
 
     render(){
         return (
-            <div className='container pb-3'>
-                <div className="row mt-3" id='projects'>
-                    <div className="col-12 section-title text-center text-white mt-5 pt-5">
-                        <i className='fa fa-folder-open'></i> Projects
+            <div className='bg'>
+                <div className='container pb-3'>
+                    <div className="row pt-3" id='projects'>
+                        <div className="col-12 section-title text-center text-white mt-5 pt-5">
+                            <i className='fa fa-folder-open'></i> Projects
+                        </div>
                     </div>
-                </div>
 
-                <div className="row mt-3">{this.setProjects()}</div>
+                    <div className="row mt-3">{this.setProjects()}</div>
 
-                <div className='row'>
-                    <div className='col-12 text-center'>
-                        <Button>
-                            <span onClick={this.toggleShowAllProjects} className='text-dark text-decoration-none'>
-                                <i className='fa fa-eye'></i> <b>{this.state.toggleText}</b>
-                            </span>
-                        </Button>
+                    <div className='row'>
+                        <div className='col-12 text-center'>
+                            <Button>
+                                <span onClick={this.toggleShowAllProjects} className='text-dark text-decoration-none'>
+                                    <i className='fa fa-eye'></i> <b>{this.state.toggleText}</b>
+                                </span>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>

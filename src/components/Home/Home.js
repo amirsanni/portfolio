@@ -9,12 +9,9 @@ class Home extends React.Component{
     render(){
         return (
             <React.Fragment>
-                <div className='bg'>
-                    <BasicInfo data={this.props.data}/>
-
-                    <Projects projects={this.props.data.projects} limit='6' />
-                </div>
-
+                <BasicInfo data={this.props.data}/>
+                
+                <Projects projects={this.props.data.projects} limit='6' />
 
                 <Experience experiences={this.props.data.experience} />
 
