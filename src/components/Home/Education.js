@@ -9,7 +9,7 @@ class Education extends React.Component{
                 return (
                     <div className="col-md-4 offset-1 mb-3" key={`edu_${index}`}>
                         <span>
-                            <img src='https://pbs.twimg.com/profile_images/1599443641/New_Picture__1__400x400.png' style={{'height':'150px'}} className='img-fluid float-left' alt={edu.school_name} />
+                            <img src={process.env.REACT_APP_ASSET_URL+edu.logo} style={{'height':'150px'}} className='img-fluid float-left' alt={edu.school_name} />
                         </span>
                         
                         <span className='pl-5 ml-5'>
