@@ -22,7 +22,7 @@ class Index extends React.Component {
     }
 
     componentDidMount = ()=>{
-        fetch(this.apiUrl+'?get=portfolio', {
+        fetch(this.apiUrl+'?action=portfolio', {
             mode:'cors'
         }).then((res)=>{
             if(res.ok){
