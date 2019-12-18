@@ -22,7 +22,7 @@ export default class ContactForm extends React.Component{
     sendMessage = ()=>{
         if(this.state.name.trim() && this.state.email.trim() && this.state.msg.trim()){
             this.setState({
-                progressMsg: 'Delivering your message. Please wait....',
+                progressMsg: '<div class="spinner-border text-info spinner-border-sm" role="status"></div> Delivering your message. Please wait....',
                 progressMsgClass: 'text-info'
             });
 
