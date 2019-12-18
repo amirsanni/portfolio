@@ -23,14 +23,17 @@ export default class ContactForm extends React.Component{
         if(this.state.name.trim() && this.state.email.trim() && this.state.msg.trim()){
             this.setState({progressMsg: 'Delivering your message. Please wait....'});
 
-            fetch(process.env.REACT_APP_API_URL+'?action=send_email', {
+            let fd = new FormData();
+
+            fd.append('msg', this.state.msg);
+            fd.append('name', this.state.name);
+            fd.append('email', this.state.email);
+            fd.append('action', 'send_email');
+
+            fetch(process.env.REACT_APP_API_URL, {
                 method: 'POST',
                 mode:'cors',
-                body: {
-                    msg: this.state.msg,
-                    name: this.state.name,
-                    email: this.state.email
-                }
+                body: fd
             }).then((response)=>{
                 if(response.ok){
                     return response.json();
@@ -84,7 +87,7 @@ export default class ContactForm extends React.Component{
             <div className='bg-alt'>
                 <div className='container pb-5 pt-3 justify-content-center'>
                     <div className='row'>
-                        <div className='col-md-8 offset-2' id='contactMe'>
+                        <div className='col-md-8 offset-2' id='contactMe' name='contactMe'>
                             <div className='row'>
                                 <div className='col-12 text-center h2'>
                                     Send me a Message
