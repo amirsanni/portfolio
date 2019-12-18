@@ -157,6 +157,11 @@ body{
   color: #A098B6;
 }
 
+input::placeholder,
+textarea::placeholder{
+  font-weight: 100;
+}
+
 
 
 
