@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Experience extends Component{
     constructor(props){
         super(props);
-        this.assetURL = process.env.REACT_APP_ASSET_URL
+        this.assetURL = process.env.REACT_APP_ASSET_URL;
     }
 
 
