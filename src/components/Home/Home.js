@@ -3,6 +3,7 @@ import BasicInfo from './BasicInfo';
 import Projects from '../Projects/Projects';
 import Experience from './Experience';
 import Education from './Education';
+import ContactForm from './ContactForm';
 import Footer from '../Footer';
 
 class Home extends React.Component{
@@ -16,6 +17,8 @@ class Home extends React.Component{
                 <Experience experiences={this.props.data.experience} />
 
                 <Education education={this.props.data.education} />
+
+                <ContactForm />
 
                 <Footer socials={this.props.data.basicInfo.social} />
             </React.Fragment>
