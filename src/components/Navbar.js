@@ -30,7 +30,7 @@ class Navbar extends React.Component{
 
         switch(title){
             case 'Contact Me':
-                window.location.href='mailto:amirsanni@gmail.com';
+                Misc.scrollToDiv('#contactMe');
                 break;
 
             case 'Projects':
