@@ -70,6 +70,12 @@ body{
 }
 
 
+.app-btn-alt{
+  background-color: #100828 !important;
+  color: #FFFFFF !important;
+}
+
+
 .social-icon{
   margin-right: 25px;
   font-size: 22px;
