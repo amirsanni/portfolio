@@ -90,7 +90,7 @@ export default class ContactForm extends React.Component{
             <div className='bg-alt'>
                 <div className='container pb-5 pt-3 justify-content-center'>
                     <div className='row'>
-                        <div className='col-md-8 offset-2' id='contactMe' name='contactMe'>
+                        <div className='col-md-8 offset-md-2' id='contactMe' name='contactMe'>
                             <div className='row'>
                                 <div className='col-12 text-center h2'>
                                     Send me a Message
