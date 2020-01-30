@@ -168,6 +168,10 @@ textarea::placeholder{
   font-weight: 100;
 }
 
+.btn-outline-light > a:hover{
+  color: #000 !important;
+}
+
 
 
 
