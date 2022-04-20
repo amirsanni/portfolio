@@ -16,8 +16,8 @@ class Projects extends React.Component{
     setSourceUrl = (githubLink)=>{
         if(githubLink){
             return (
-                <button className="btn btn-sm btn-outline-light">
-                    <a className="text-white text-decoration-none" href={githubLink} target="_blank" rel="noopener noreferrer" title='Source Code'>
+                <button className="btn btn-sm btn-outline-primary">
+                    <a className="text-dark text-decoration-none" href={githubLink} target="_blank" rel="noopener noreferrer" title='Source Code'>
                         <i className="fa fa-github"></i> Source Code
                     </a>
                 </button>
@@ -28,8 +28,8 @@ class Projects extends React.Component{
     setDemoUrl = (demoLink) => {
         if(demoLink){
             return (
-                <button className="btn btn-sm btn-outline-light mr-2">
-                    <a className="text-white text-decoration-none" href={demoLink} target="_blank" rel="noopener noreferrer" title='Visit Site'>
+                <button className="btn btn-sm btn-outline-primary mr-2">
+                    <a className="text-dark text-decoration-none" href={demoLink} target="_blank" rel="noopener noreferrer" title='Visit Site'>
                         <i className="fa fa-globe"></i> Website
                     </a>
                 </button>
@@ -53,13 +53,13 @@ class Projects extends React.Component{
             projects = projectsToShow.map((project, index)=>{
                 return (
                     <div className="col-md-4 mb-3" key={'project_'+index}>
-                        <div className="card card-custom" style={{background:this.setBg(index)}}>
+                        <div className="card card-custom">
                             <div className="card-body">
-                                <div className="card-custom-title">{project.name}</div>
-                                <div className='text-white mt-1'>{project.description}</div>
+                                <div className="card-custom-title">{project.name} - (<b>{project.year}</b>)</div>
+                                <div className='mt-1'>{project.description}</div>
                             </div>
 
-                            <div className="card-footer">
+                            <div className="card-footer bg-alt">
                                 <span className='float-left'>{this.setDemoUrl(project.site_url)}</span>
 
                                 <span className='float-right'>{this.setSourceUrl(project.github_url)}</span>

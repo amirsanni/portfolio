@@ -95,13 +95,19 @@ body{
   font-weight: 300;
   font-size: 14px;
   color: #023734;
+  background: #F4F1FC;
+}
+
+.card-footer {
+  color: #023734;
+  background: #F4F1FC;
 }
 
 .card-custom-title{
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
 }
 
 .exp-card{
