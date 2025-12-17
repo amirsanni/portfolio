@@ -35,7 +35,7 @@ class Experience extends Component{
                                             <img src={this.assetURL+exp.logo} className="company-logo" alt={exp.company_name} />
                                         </div>
 
-                                        <div className='col-md-8'>
+                                        <div className='col-md-7'>
                                             <div className='job-title'>{exp.position}</div>
                                             <div>
                                                 <span>
@@ -53,7 +53,7 @@ class Experience extends Component{
                                             </div>
                                         </div>
                                         
-                                        <div className='col-md-2 duration text-right'>
+                                        <div className='col-md-3 duration text-right'>
                                             {`${exp.start_date} - ${exp.end_date}`}
                                         </div>
                                     </div>
