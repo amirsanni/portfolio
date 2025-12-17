@@ -55,7 +55,7 @@ class Projects extends React.Component{
                     <div className="col-md-4 mb-3" key={'project_'+index}>
                         <div className="card card-custom">
                             <div className="card-body">
-                                <div className="card-custom-title">{project.name} - (<b>{project.year}</b>)</div>
+                                <div className="card-custom-title">{project.name}</div>
                                 <div className='mt-1'>{project.description}</div>
                             </div>
 
